@@ -24,7 +24,7 @@ export default function LandingPage() {
                 <p className="text-[#454A4A] font-medium text-2xl">
                   for Africa by <br className="hidden md:block"/> Strata.
                 </p>
-                <p className="text-[#454A4A] max-w-2xl text-xl font-medium">
+                <p className="text-[#454A4A] max-w-2xl text-lg md:text-xl font-medium">
                   We develop strategic frameworks and build solutions that empower
                   businesses in Africa to unlock newfound dynamics, enhance
                   operational efficiency, and thrive in competitive global
