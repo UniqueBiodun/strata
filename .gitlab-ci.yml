@@ -3,7 +3,7 @@ include:
   - project: "$base/devops/build-template"
     file: "build.yml"
 variables:
-  PORT: "80"
+  PORT: "3000"
 
 ## This section lists the logical order of the application development workflow
 stages:
