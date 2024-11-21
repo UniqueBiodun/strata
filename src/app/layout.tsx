@@ -1,15 +1,16 @@
-import type { Metadata } from "next";
-import { Kumbh_Sans } from 'next/font/google'
-import "./globals.css";
+import type { Metadata } from 'next';
+import { Kumbh_Sans } from 'next/font/google';
+import './globals.css';
+import Navbar from './containers/navbar/Navbar';
 
 const kumbhSans = Kumbh_Sans({
   subsets: ['latin'],
   display: 'swap',
-})
- 
+});
+
 export const metadata: Metadata = {
-  title: "Crunch by Strata",
-  description: "Crunch by Strata",
+  title: 'Crunch by Strata',
+  description: 'Crunch by Strata',
 };
 
 export default function RootLayout({
@@ -18,10 +19,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-       <body
-        className={`${kumbhSans.className}  antialiased`}
-      >
+    <html lang='en'>
+      <body className={`${kumbhSans.className}  antialiased`}>
+        <Navbar />
         {children}
       </body>
     </html>
