@@ -28,7 +28,9 @@ const config: Config = {
         primary: {
           100: '#101619',
           200: '#3B3F3F',
+          300: '#565E5D',
         },
+        'button-bg': '#0C6291',
         'nav-bg': '#F3F8F8',
       },
       container: {
