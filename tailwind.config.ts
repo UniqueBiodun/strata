@@ -29,6 +29,7 @@ const config: Config = {
           100: '#101619',
           200: '#3B3F3F',
           300: '#565E5D',
+          400: '#454A4A',
         },
         'button-bg': '#0C6291',
         'nav-bg': '#F3F8F8',
@@ -44,9 +45,9 @@ const config: Config = {
         center: true,
       },
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'custom-gradient-1':
+          'linear-gradient(180deg, rgba(204, 222, 235, 0.8) 0%, #E2F2FC 15%, #FFFFFF 100%)',
+        'bos-banner': "url('/images/bos-banner.svg')",
       },
     },
   },
