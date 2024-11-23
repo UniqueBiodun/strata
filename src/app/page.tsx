@@ -1,5 +1,8 @@
 import Image from 'next/image';
 import BuildOnStrata from './advisory/BuildOnStrata';
+import BuildOnStrataBanner from './advisory/BuildOnStrataBanner';
+import TestimonialCarousel from './advisory/Testimonial';
+import BuildingBlocksSection from './advisory/BuildBlocks';
 
 export default function LandingPage() {
   return (
@@ -148,6 +151,9 @@ export default function LandingPage() {
         </div>
       </main>
       <BuildOnStrata />
+      <BuildOnStrataBanner />
+      <TestimonialCarousel />
+      <BuildingBlocksSection />
     </>
   );
 }

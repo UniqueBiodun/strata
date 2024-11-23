@@ -30,6 +30,10 @@ const config: Config = {
           200: '#3B3F3F',
           300: '#565E5D',
           400: '#454A4A',
+          500: '#B0B6B5',
+        },
+        secondary: {
+          100: '#0E80BB',
         },
         'button-bg': '#0C6291',
         'nav-bg': '#F3F8F8',
@@ -47,7 +51,11 @@ const config: Config = {
       backgroundImage: {
         'custom-gradient-1':
           'linear-gradient(180deg, rgba(204, 222, 235, 0.8) 0%, #E2F2FC 15%, #FFFFFF 100%)',
+        'custom-gradient-2':
+          'linear-gradient(180deg, #FFFFFF 0%, #E2F2FC 85%, rgba(204, 222, 235, 0.8) 100%)',
         'bos-banner': "url('/images/bos-banner.svg')",
+        'pattern-top': "url('/icons/bg-pattern-top.svg')",
+        'pattern-bottom': "url('/icons/bg-pattern-bottom.svg')",
       },
     },
   },
