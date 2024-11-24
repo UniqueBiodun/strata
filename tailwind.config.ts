@@ -56,6 +56,7 @@ const config: Config = {
         'bos-banner': "url('/images/bos-banner.svg')",
         'pattern-top': "url('/icons/bg-pattern-top.svg')",
         'pattern-bottom': "url('/icons/bg-pattern-bottom.svg')",
+        'footer-icon': "url('/icons/footer-bg.svg')",
       },
     },
   },

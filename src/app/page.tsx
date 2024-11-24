@@ -3,6 +3,8 @@ import BuildOnStrata from './advisory/BuildOnStrata';
 import BuildOnStrataBanner from './advisory/BuildOnStrataBanner';
 import TestimonialCarousel from './advisory/Testimonial';
 import BuildingBlocksSection from './advisory/BuildBlocks';
+import Crunch from './advisory/IntroductionCrunch';
+import BuildOnStrataBanner1 from './advisory/BuildOnStrataBanner1';
 
 export default function LandingPage() {
   return (
@@ -154,6 +156,8 @@ export default function LandingPage() {
       <BuildOnStrataBanner />
       <TestimonialCarousel />
       <BuildingBlocksSection />
+      <Crunch />
+      <BuildOnStrataBanner1 />
     </>
   );
 }
