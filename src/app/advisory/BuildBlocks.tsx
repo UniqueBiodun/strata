@@ -206,7 +206,7 @@ const BuildingBlocksSection = () => {
           </div>
         </div>
       </div>
-      <div className='bg-pattern-bottom bg-no-repeat bg-cover min-h-[20rem] -mt-24'></div>
+      <div className='bg-pattern-bottom bg-no-repeat bg-cover min-h-[19rem] -mt-28'></div>
     </main>
   );
 };

@@ -219,7 +219,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Large Screen View of the Footer */}
-          <div className='hidden lg:flex lg:flex-row lg:justify-between'>
+          <div className='hidden lg:flex lg:flex-row lg:justify-between pb-10'>
             <div className='flex flex-col gap-16'>
               <p className='font-semibold text-primary-100 text-xl'>Strata</p>
               <p className='font-semibold text-primary-100 text-xl'>Social</p>
