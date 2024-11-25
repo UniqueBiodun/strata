@@ -34,6 +34,7 @@ const config: Config = {
         },
         secondary: {
           100: '#0E80BB',
+          200: '#1BA0DC',
         },
         'button-bg': '#0C6291',
         'nav-bg': '#F3F8F8',

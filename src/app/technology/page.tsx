@@ -1,10 +1,18 @@
 import React from 'react';
-import Navbar from '../containers/navbar/Navbar';
+import WhyWeBuild from './WhyWeBuild';
+import Crunch from '../advisory/IntroductionCrunch';
+import ReallyBuild from './ReallyBuild';
+import BuildOnStrataBanner1 from '../advisory/BuildOnStrataBanner1';
+import TechHeroSection from './TechHero';
 
 const page = () => {
   return (
     <div>
-      <p>page</p>
+      <TechHeroSection />
+      <WhyWeBuild />
+      <Crunch />
+      <ReallyBuild />
+      <BuildOnStrataBanner1 />
     </div>
   );
 };
