@@ -10,7 +10,6 @@ export default function LandingPage() {
   return (
     <>
       <main className='min-h-[95vh] bg-custom-gradient-1 relative'>
-        {/* bg-nav-bg */}
         {/* bg-gradient-to-b from-white to-[#E2F2FC] */}
         <div className='container max-w-full'>
           {/* The Infrastructure Heading text */}

@@ -29,10 +29,12 @@ const Navbar: React.FC = () => {
   const isActive = (path: string): boolean => pathname === path;
 
   return (
-    <nav className='container max-w-full  bg-custom-gradient-2 flex items-center justify-between py-10'>
+    <nav className='container max-w-full bg-custom-gradient-2 flex items-center justify-between py-10'>
       {/* Left: Logo and Active Label */}
       <div className='flex items-center space-x-4'>
-        <Image src={'logo.svg'} alt='wave' width={117.37} height={30} />
+        <Link href='/'>
+          <Image src={'logo.svg'} alt='wave' width={117.37} height={30} />
+        </Link>
         <div className='flex items-center gap-1'>
           <Image
             src={'/icons/greater-than.svg'}

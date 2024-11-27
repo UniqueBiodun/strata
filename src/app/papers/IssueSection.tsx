@@ -1,16 +1,24 @@
+'use client';
 import React from 'react';
 import Image from 'next/image';
 
-const IssueSection = () => {
+const IssueSection = ({
+  onReadIssue,
+}: {
+  onReadIssue: (issueId: string) => void;
+}) => {
   return (
     <main className='py-24 bg-custom-gradient-2'>
       <div className='container max-w-full'>
         <div className='flex flex-col gap-24'>
-          {/*ISSUE 03 */}
+          {/* ISSUE 03 */}
           <div className='flex flex-col lg:flex-row gap-10'>
             <div className='lg:w-[40%]'>
               <span className='flex items-center gap-2'>
-                <p className='text-2xl font-semibold text-primary-200 uppercase'>
+                <p
+                  className='text-2xl font-semibold text-primary-200 uppercase cursor-pointer'
+                  onClick={() => onReadIssue('issue-3')}
+                >
                   issue 3
                 </p>
                 <Image
@@ -21,7 +29,10 @@ const IssueSection = () => {
                   className='w-[17rem] lg:w-[25rem]'
                 />
               </span>
-              <p className='font-semibold text-lg text-secondary-300'>
+              <p
+                className='font-semibold text-lg text-secondary-300 cursor-pointer'
+                onClick={() => onReadIssue('issue-3')}
+              >
                 Mar 2025
               </p>
             </div>
@@ -40,11 +51,13 @@ const IssueSection = () => {
                       <p className='text-primary-200 font-normal text-lg lg:w-[80%]'>
                         The potential for AI to infuse business and value chains
                         across various industries is greater than ever
-                        before—but where should executives start? where should
-                        executives start?
+                        before—but where should executives start?
                       </p>
                       <div>
-                        <p className='text-xl font-medium text-button-bg'>
+                        <p
+                          className='text-xl font-medium text-button-bg cursor-pointer'
+                          onClick={() => onReadIssue('issue-3')}
+                        >
                           Read issue
                         </p>
                         <Image
@@ -61,12 +74,14 @@ const IssueSection = () => {
               </div>
             </div>
           </div>
-
-          {/*ISSUE 02 */}
+          {/* ISSUE 02 */}
           <div className='flex flex-col lg:flex-row gap-10'>
             <div className='lg:w-[40%]'>
               <span className='flex items-center gap-2'>
-                <p className='text-2xl font-semibold text-primary-200 uppercase'>
+                <p
+                  className='text-2xl font-semibold text-primary-200 uppercase cursor-pointer'
+                  onClick={() => onReadIssue('issue-2')}
+                >
                   issue 2
                 </p>
                 <Image
@@ -77,7 +92,10 @@ const IssueSection = () => {
                   className='w-[17rem] lg:w-[25rem]'
                 />
               </span>
-              <p className='font-semibold text-lg text-secondary-300'>
+              <p
+                className='font-semibold text-lg text-secondary-300 cursor-pointer'
+                onClick={() => onReadIssue('issue-2')}
+              >
                 Feb 2025
               </p>
             </div>
@@ -99,7 +117,10 @@ const IssueSection = () => {
                         what drives the greatest value matters the most.
                       </p>
                       <div>
-                        <p className='text-xl font-medium text-button-bg'>
+                        <p
+                          className='text-xl font-medium text-button-bg cursor-pointer'
+                          onClick={() => onReadIssue('issue-2')}
+                        >
                           Read issue
                         </p>
                         <Image
@@ -116,12 +137,14 @@ const IssueSection = () => {
               </div>
             </div>
           </div>
-
-          {/*ISSUE 01 */}
+          {/* ISSUE 01 */}
           <div className='flex flex-col lg:flex-row gap-10'>
             <div className='lg:w-[40%]'>
               <span className='flex items-center gap-2'>
-                <p className='text-2xl font-semibold text-primary-200 uppercase'>
+                <p
+                  className='text-2xl font-semibold text-primary-200 uppercase cursor-pointer'
+                  onClick={() => onReadIssue('issue-1')}
+                >
                   issue 1
                 </p>
                 <Image
@@ -132,8 +155,11 @@ const IssueSection = () => {
                   className='w-[17rem] lg:w-[25rem]'
                 />
               </span>
-              <p className='font-semibold text-lg text-secondary-300'>
-                Jan 2025
+              <p
+                className='font-semibold text-lg text-secondary-300 cursor-pointer'
+                onClick={() => onReadIssue('issue-1')}
+              >
+                Mar 2025
               </p>
             </div>
             <div className='lg:w-[60%]'>
@@ -155,7 +181,10 @@ const IssueSection = () => {
                         understanding of operational excellence.
                       </p>
                       <div>
-                        <p className='text-xl font-medium text-button-bg'>
+                        <p
+                          className='text-xl font-medium text-button-bg cursor-pointer'
+                          onClick={() => onReadIssue('issue-1')}
+                        >
                           Read issue
                         </p>
                         <Image

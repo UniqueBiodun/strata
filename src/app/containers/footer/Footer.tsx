@@ -90,7 +90,7 @@ const Footer: React.FC = () => {
                   <MenuItem
                     href=''
                     label='Text'
-                    isActive={isActive('/contact')}
+                    isActive={isActive('')}
                     addCss='invisible'
                   />
                 </div>
@@ -337,7 +337,7 @@ const Footer: React.FC = () => {
                 <MenuItem
                   href=''
                   label='Text'
-                  isActive={isActive('/contact')}
+                  isActive={isActive('')}
                   addCss='invisible'
                 />
                 <MenuItem
