@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
 const Footer: React.FC = () => {
   const pathname = usePathname(); // Get the current path
   const [activeLabel, setActiveLabel] = useState<string>('Advisory'); // Default active label
-  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false); // Mobile menu state
+  // const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false); // Mobile menu state
 
   useEffect(() => {
     // Map of paths to labels

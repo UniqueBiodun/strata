@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 export default function LegalBodySection() {
   return (
     <>
@@ -29,13 +27,6 @@ export default function LegalBodySection() {
                       </span>
                     </p>
                   </div>
-                  {/* <p>
-                    sense of achievement. Only by learning, adapting, and
-                    getting really good at things that didn’t exist five years
-                    ago—such as the collaboration technologies and hybrid
-                    workplaces that have spread almost everywhere—could a
-                    company survive.
-                  </p> */}
                 </div>
               </div>
               <div className='font-normal text-base text-primary-200 flex flex-col gap-8'>
