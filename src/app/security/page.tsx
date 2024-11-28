@@ -1,9 +1,12 @@
 import React from 'react';
+import SecurityHeroSection from './SecurityHeroSection';
+import SecurityDarkBg from './SecurityDarkBg';
 
 const page = () => {
   return (
-    <div className='container max-w-full'>
-      <p>Security Page</p>
+    <div className=''>
+      <SecurityHeroSection />
+      <SecurityDarkBg />
     </div>
   );
 };

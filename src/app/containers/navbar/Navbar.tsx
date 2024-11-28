@@ -18,6 +18,8 @@ const Navbar: React.FC = () => {
       '/about': 'About',
       '/crunch': 'Crunch',
       '/contact': 'Contact',
+      '/legal': 'Legal',
+      '/security': 'Security',
     };
 
     // Update the active label

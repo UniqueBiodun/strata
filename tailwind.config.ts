@@ -7,6 +7,9 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    listStyleType: {
+      square: 'square',
+    },
     screens: {
       xs: '414px',
       sm: '640px',

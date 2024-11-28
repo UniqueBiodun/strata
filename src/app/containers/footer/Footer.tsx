@@ -18,6 +18,8 @@ const Footer: React.FC = () => {
       '/about': 'About',
       '/crunch': 'Crunch',
       '/contact': 'Contact',
+      '/legal': 'Legal',
+      '/security': 'Security',
     };
 
     // Update the active label
@@ -162,11 +164,15 @@ const Footer: React.FC = () => {
               <div className='flex flex-col md:flex-row gap-16 text-base p-4 md:p-0'>
                 {/* Column 1 */}
                 <div className='flex flex-col justify-center space-y-2'>
-                  <MenuItem href='#' label='Terms' isActive={isActive('#')} />{' '}
                   <MenuItem
-                    href='#'
+                    href='/legal'
+                    label='Terms'
+                    isActive={isActive('/legal')}
+                  />{' '}
+                  <MenuItem
+                    href='/security'
                     label='Security'
-                    isActive={isActive('#')}
+                    isActive={isActive('/security')}
                   />
                 </div>
 
@@ -242,12 +248,16 @@ const Footer: React.FC = () => {
                 />
                 <MenuItem href='#' label='TikTok' isActive={isActive('#')} />
                 <MenuItem
-                  href='#'
+                  href='/legal'
                   label='Terms'
-                  isActive={isActive('#')}
+                  isActive={isActive('/legal')}
                   addCss='pt-6'
                 />
-                <MenuItem href='#' label='Security' isActive={isActive('#')} />
+                <MenuItem
+                  href='/security'
+                  label='Security'
+                  isActive={isActive('/security')}
+                />
               </div>
 
               {/* Column 2 */}

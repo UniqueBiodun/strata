@@ -1,9 +1,12 @@
 import React from 'react';
+import LegalHeroSection from './LegalHeroSection';
+import LegalBodySection from './LegalBody';
 
 const page = () => {
   return (
-    <div className='container max-w-full'>
-      <p>Legal Page</p>
+    <div>
+      <LegalHeroSection />
+      <LegalBodySection />
     </div>
   );
 };
