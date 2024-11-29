@@ -32,14 +32,14 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className='bg-[#D6E5EF]'>
-      <div className='md:container max-w-full px-4 md:px-0'>
+      <div className={`container max-w-full`}>
         <div className='flex items-center justify-between py-10'>
           {/* Left: Logo and Active Label */}
           <div className='flex items-center space-x-4'>
             <Link href='/'>
               <Image src={'logo.svg'} alt='wave' width={117.37} height={30} />
             </Link>
-            <div className='flex items-center gap-1'>
+            <div className='hidden md:flex items-center gap-1'>
               <Image
                 src={'/icons/greater-than.svg'}
                 alt='gt'
@@ -67,13 +67,70 @@ const Navbar: React.FC = () => {
             </button>
           </div>
 
-          {/* Navigation Links */}
-          <div
-            className={`${
-              isMenuOpen ? 'block' : 'hidden'
-            } absolute z-40 top-20 w-full h-full bg-[#D6E5EF] md:static md:block md:w-auto`}
-          >
-            <div className='flex flex-col md:flex-row gap-8 text-base p-4 md:p-0'>
+          {/* Desktop Navigation Links */}
+          <div className={`hidden md:flex md:items-center md:gap-8 text-base`}>
+            {/* Column 1 */}
+            <div className='flex flex-col space-y-1'>
+              <MenuItem href='/' label='Advisory' isActive={isActive('/')} />
+              <MenuItem
+                href='/technology'
+                label='Technology'
+                isActive={isActive('/technology')}
+              />
+            </div>
+
+            {/* Column 2 */}
+            <div className='flex flex-col space-y-1 lg:px-4'>
+              <MenuItem
+                href='/papers'
+                label='Papers'
+                isActive={isActive('/papers')}
+              />
+              <MenuItem
+                href='/about'
+                label='About'
+                isActive={isActive('/about')}
+              />
+            </div>
+
+            {/* Column 3 */}
+            <div className='flex flex-col space-y-1'>
+              <MenuItem
+                href='/crunch'
+                label='Crunch'
+                isActive={isActive('/crunch')}
+              />
+              <MenuItem
+                href='/contact'
+                label='Contact'
+                isActive={isActive('/contact')}
+              />
+            </div>
+
+            {/* Column 4 */}
+            <div className='flex flex-col space-y-1'>
+              <MenuItem
+                href='#'
+                label='Go to Crunch'
+                isActive={isActive('#')}
+                addCss='lg:pl-8'
+              />
+              <MenuItem
+                href='#'
+                label='Empty'
+                isActive={isActive('#')}
+                addCss='invisible'
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Navigation */}
+      {isMenuOpen && (
+        <div className='absolute z-40 top-20 pt-10 w-full h-full bg-[#D6E5EF] md:hidden'>
+          <div className='px-6'>
+            <div className='flex flex-col gap-8 text-base p-4'>
               {/* Column 1 */}
               <div className='flex flex-col justify-center space-y-1'>
                 <MenuItem href='/' label='Advisory' isActive={isActive('/')} />
@@ -130,7 +187,7 @@ const Navbar: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
+      )}
     </nav>
   );
 };
