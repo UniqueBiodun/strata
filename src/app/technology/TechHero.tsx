@@ -3,7 +3,7 @@ export default function TechHeroSection() {
     <>
       <main className='min-h-[50vh] bg-custom-gradient-1'>
         <div className='container max-w-full pb-10 pt-8 space-y-8'>
-          <p className='text-primary-100 text-7xl font-bold lg:w-[80%]'>
+          <p className='text-primary-100 text-5xl md:text-7xl font-bold lg:w-[80%]'>
             Technology <span className='text-primary-400'>tuned to</span>{' '}
             Africa’s business needs
           </p>

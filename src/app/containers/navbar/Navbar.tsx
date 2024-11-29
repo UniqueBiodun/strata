@@ -69,7 +69,6 @@ const Navbar: React.FC = () => {
 
           {/* Desktop Navigation Links */}
           <div className={`hidden md:flex md:items-center md:gap-8 text-base`}>
-            {/* Column 1 */}
             <div className='flex flex-col space-y-1'>
               <MenuItem href='/' label='Advisory' isActive={isActive('/')} />
               <MenuItem
@@ -78,8 +77,6 @@ const Navbar: React.FC = () => {
                 isActive={isActive('/technology')}
               />
             </div>
-
-            {/* Column 2 */}
             <div className='flex flex-col space-y-1 lg:px-4'>
               <MenuItem
                 href='/papers'
@@ -92,8 +89,6 @@ const Navbar: React.FC = () => {
                 isActive={isActive('/about')}
               />
             </div>
-
-            {/* Column 3 */}
             <div className='flex flex-col space-y-1'>
               <MenuItem
                 href='/crunch'
@@ -106,8 +101,6 @@ const Navbar: React.FC = () => {
                 isActive={isActive('/contact')}
               />
             </div>
-
-            {/* Column 4 */}
             <div className='flex flex-col space-y-1'>
               <MenuItem
                 href='#'
@@ -131,57 +124,62 @@ const Navbar: React.FC = () => {
         <div className='absolute z-40 top-20 pt-10 w-full h-full bg-[#D6E5EF] md:hidden'>
           <div className='px-6'>
             <div className='flex flex-col gap-8 text-base p-4'>
-              {/* Column 1 */}
               <div className='flex flex-col justify-center space-y-1'>
-                <MenuItem href='/' label='Advisory' isActive={isActive('/')} />
+                <MenuItem
+                  href='/'
+                  label='Advisory'
+                  isActive={isActive('/')}
+                  onClick={() => setIsMenuOpen(false)}
+                />
                 <MenuItem
                   href='/technology'
                   label='Technology'
                   isActive={isActive('/technology')}
+                  onClick={() => setIsMenuOpen(false)}
                 />
               </div>
-
-              {/* Column 2 */}
               <div className='flex flex-col justify-center space-y-1 lg:px-4'>
                 <MenuItem
                   href='/papers'
                   label='Papers'
                   isActive={isActive('/papers')}
+                  onClick={() => setIsMenuOpen(false)}
                 />
                 <MenuItem
                   href='/about'
                   label='About'
                   isActive={isActive('/about')}
+                  onClick={() => setIsMenuOpen(false)}
                 />
               </div>
-
-              {/* Column 3 */}
               <div className='flex flex-col justify-center space-y-1'>
                 <MenuItem
                   href='/crunch'
                   label='Crunch'
                   isActive={isActive('/crunch')}
+                  onClick={() => setIsMenuOpen(false)}
                 />
                 <MenuItem
                   href='/contact'
                   label='Contact'
                   isActive={isActive('/contact')}
+                  onClick={() => setIsMenuOpen(false)}
                 />
               </div>
-
-              {/* Column 4 */}
               <div className='flex flex-col justify-center space-y-1'>
                 <MenuItem
                   href='#'
                   label='Go to Crunch'
                   isActive={isActive('#')}
                   addCss='lg:pl-8'
+                  onClick={() => setIsMenuOpen(false)}
                 />
                 <MenuItem
                   href='#'
                   label='Empty'
                   isActive={isActive('#')}
                   addCss='invisible'
+                  onClick={() => setIsMenuOpen(false)}
                 />
               </div>
             </div>
@@ -198,6 +196,7 @@ interface MenuItemProps {
   label: string;
   isActive: boolean;
   addCss?: string;
+  onClick?: () => void; // New onClick prop
 }
 
 const MenuItem: React.FC<MenuItemProps> = ({
@@ -205,6 +204,7 @@ const MenuItem: React.FC<MenuItemProps> = ({
   label,
   isActive,
   addCss,
+  onClick,
 }) => {
   return (
     <div className='flex items-center gap-[0.375rem]'>
@@ -217,7 +217,13 @@ const MenuItem: React.FC<MenuItemProps> = ({
           className='-ml-4'
         />
       )}
-      <NavLink href={href} label={label} isActive={isActive} addCss={addCss} />
+      <NavLink
+        href={href}
+        label={label}
+        isActive={isActive}
+        addCss={addCss}
+        onClick={onClick} // Pass onClick to NavLink
+      />
     </div>
   );
 };
@@ -228,15 +234,23 @@ interface NavLinkProps {
   label: string;
   isActive: boolean;
   addCss?: string;
+  onClick?: () => void; // New onClick prop
 }
 
-const NavLink: React.FC<NavLinkProps> = ({ href, label, isActive, addCss }) => {
+const NavLink: React.FC<NavLinkProps> = ({
+  href,
+  label,
+  isActive,
+  addCss,
+  onClick,
+}) => {
   return (
     <Link
       href={href}
       className={`${addCss} text-base ${
         isActive ? 'text-primary-100 font-semibold' : 'text-primary-200'
       } hover:text-blue-600`}
+      onClick={onClick} // Attach onClick
     >
       {label}
     </Link>

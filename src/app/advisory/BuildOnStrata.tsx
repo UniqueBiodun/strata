@@ -3,7 +3,7 @@ import Image from 'next/image';
 export default function BuildOnStrata() {
   return (
     <>
-      <main className='min-h-[100vh] bg-custom-gradient-1'>
+      <main className='min-h-[100vh] bg-custom-gradient-3'>
         <div className='container max-w-full py-24'>
           {/* When You Build On Strata Text Section */}
           <div>

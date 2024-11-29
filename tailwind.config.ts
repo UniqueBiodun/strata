@@ -58,6 +58,8 @@ const config: Config = {
           'linear-gradient(180deg, rgba(204, 222, 235, 0.8) 0%, #E2F2FC 15%, #FFFFFF 100%)',
         'custom-gradient-2':
           'linear-gradient(180deg, #FFFFFF 0%, #E2F2FC 85%, rgba(204, 222, 235, 0.8) 100%)',
+        'custom-gradient-3':
+          'linear-gradient(180deg, #FFFFFF 0%, #E2F2FC 85%, #FFFFFF 100%)',
         'bos-banner': "url('/images/bos-banner.svg')",
         'pattern-top': "url('/icons/bg-pattern-top.svg')",
         'pattern-bottom': "url('/icons/bg-pattern-bottom.svg')",
