@@ -31,99 +31,103 @@ const Navbar: React.FC = () => {
   const isActive = (path: string): boolean => pathname === path;
 
   return (
-    <nav className='container max-w-full bg-custom-gradient-2 flex items-center justify-between py-10'>
-      {/* Left: Logo and Active Label */}
-      <div className='flex items-center space-x-4'>
-        <Link href='/'>
-          <Image src={'logo.svg'} alt='wave' width={117.37} height={30} />
-        </Link>
-        <div className='flex items-center gap-1'>
-          <Image
-            src={'/icons/greater-than.svg'}
-            alt='gt'
-            width={16}
-            height={16}
-          />
-          <span className='text-primary-100 font-semibold text-lg'>
-            {activeLabel}
-          </span>
-        </div>
-      </div>
-
-      {/* Right: Hamburger Icon (Mobile) */}
-      <div className='md:hidden'>
-        <button
-          onClick={() => setIsMenuOpen((prev) => !prev)}
-          className='text-primary-100 focus:outline-none'
-        >
-          <Image
-            src={isMenuOpen ? '/icons/close.svg' : '/icons/hamburger.svg'}
-            alt='menu-toggle'
-            width={20}
-            height={20}
-          />
-        </button>
-      </div>
-
-      {/* Right: Navigation Links */}
-      <div
-        className={`${
-          isMenuOpen ? 'block' : 'hidden'
-        } absolute top-20 pl-1 w-full h-full bg-nav-bg md:bg-inherit  md:static md:block md:w-auto`}
-      >
-        <div className='flex flex-col md:flex-row gap-8 text-base p-4 md:p-0'>
-          {/* Column 1 */}
-          <div className='flex flex-col justify-center space-y-1'>
-            <MenuItem href='/' label='Advisory' isActive={isActive('/')} />
-            <MenuItem
-              href='/technology'
-              label='Technology'
-              isActive={isActive('/technology')}
-            />
+    <nav className='bg-[#D6E5EF]'>
+      <div className='md:container max-w-full px-4 md:px-0'>
+        <div className='flex items-center justify-between py-10'>
+          {/* Left: Logo and Active Label */}
+          <div className='flex items-center space-x-4'>
+            <Link href='/'>
+              <Image src={'logo.svg'} alt='wave' width={117.37} height={30} />
+            </Link>
+            <div className='flex items-center gap-1'>
+              <Image
+                src={'/icons/greater-than.svg'}
+                alt='gt'
+                width={16}
+                height={16}
+              />
+              <span className='text-primary-100 font-semibold text-lg'>
+                {activeLabel}
+              </span>
+            </div>
           </div>
 
-          {/* Column 2 */}
-          <div className='flex flex-col justify-center space-y-1 lg:px-4'>
-            <MenuItem
-              href='/papers'
-              label='Papers'
-              isActive={isActive('/papers')}
-            />
-            <MenuItem
-              href='/about'
-              label='About'
-              isActive={isActive('/about')}
-            />
+          {/* Hamburger Icon (Mobile) */}
+          <div className='md:hidden'>
+            <button
+              onClick={() => setIsMenuOpen((prev) => !prev)}
+              className='text-primary-100 focus:outline-none'
+            >
+              <Image
+                src={isMenuOpen ? '/icons/close.svg' : '/icons/hamburger.svg'}
+                alt='menu-toggle'
+                width={30}
+                height={30}
+              />
+            </button>
           </div>
 
-          {/* Column 3 */}
-          <div className='flex flex-col justify-center space-y-1'>
-            <MenuItem
-              href='/crunch'
-              label='Crunch'
-              isActive={isActive('/crunch')}
-            />
-            <MenuItem
-              href='/contact'
-              label='Contact'
-              isActive={isActive('/contact')}
-            />
-          </div>
+          {/* Navigation Links */}
+          <div
+            className={`${
+              isMenuOpen ? 'block' : 'hidden'
+            } absolute z-40 top-20 w-full h-full bg-[#D6E5EF] md:static md:block md:w-auto`}
+          >
+            <div className='flex flex-col md:flex-row gap-8 text-base p-4 md:p-0'>
+              {/* Column 1 */}
+              <div className='flex flex-col justify-center space-y-1'>
+                <MenuItem href='/' label='Advisory' isActive={isActive('/')} />
+                <MenuItem
+                  href='/technology'
+                  label='Technology'
+                  isActive={isActive('/technology')}
+                />
+              </div>
 
-          {/* Column 4 */}
-          <div className='flex flex-col justify-center space-y-1'>
-            <MenuItem
-              href='#'
-              label='Go to Crunch'
-              isActive={isActive('#')}
-              addCss='lg:pl-8'
-            />
-            <MenuItem
-              href='#'
-              label='Empty'
-              isActive={isActive('#')}
-              addCss='invisible'
-            />
+              {/* Column 2 */}
+              <div className='flex flex-col justify-center space-y-1 lg:px-4'>
+                <MenuItem
+                  href='/papers'
+                  label='Papers'
+                  isActive={isActive('/papers')}
+                />
+                <MenuItem
+                  href='/about'
+                  label='About'
+                  isActive={isActive('/about')}
+                />
+              </div>
+
+              {/* Column 3 */}
+              <div className='flex flex-col justify-center space-y-1'>
+                <MenuItem
+                  href='/crunch'
+                  label='Crunch'
+                  isActive={isActive('/crunch')}
+                />
+                <MenuItem
+                  href='/contact'
+                  label='Contact'
+                  isActive={isActive('/contact')}
+                />
+              </div>
+
+              {/* Column 4 */}
+              <div className='flex flex-col justify-center space-y-1'>
+                <MenuItem
+                  href='#'
+                  label='Go to Crunch'
+                  isActive={isActive('#')}
+                  addCss='lg:pl-8'
+                />
+                <MenuItem
+                  href='#'
+                  label='Empty'
+                  isActive={isActive('#')}
+                  addCss='invisible'
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>

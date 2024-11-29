@@ -85,9 +85,9 @@ const Footer: React.FC = () => {
                 {/* Column 4 */}
                 <div className='flex flex-col justify-center space-y-2'>
                   <MenuItem
-                    href='/go-to-crunch'
+                    href='#'
                     label='Go to Crunch'
-                    isActive={isActive('/crunch')}
+                    isActive={isActive('#')}
                   />
                   <MenuItem
                     href=''
@@ -340,9 +340,9 @@ const Footer: React.FC = () => {
               {/* Column 4 */}
               <div className='flex flex-col justify-center space-y-2'>
                 <MenuItem
-                  href='/go-to-crunch'
+                  href='#'
                   label='Go to Crunch'
-                  isActive={isActive('/crunch')}
+                  isActive={isActive('#')}
                 />
                 <MenuItem
                   href=''
