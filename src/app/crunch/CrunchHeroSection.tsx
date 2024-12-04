@@ -1,7 +1,10 @@
 import Image from 'next/image';
 import CrunchDashboard from './CrunchDashboard';
+import Link from 'next/link';
 
 export default function CrunchHeroSection() {
+  const goToCrunch: any = process.env.NEXT_PUBLIC_GO_TO_CRUNCH;
+
   return (
     <>
       <main className='min-h-[50vh] bg-custom-gradient-1'>
@@ -23,20 +26,22 @@ export default function CrunchHeroSection() {
               </div>
             </div>
             <div className='flex flex-col-reverse lg:flex-row lg:justify-between lg:items-end lg:gap-0 gap-8'>
-              <div className='w-1/2 lg:w-auto bg-button-bg hover:bg-[#0A5681] flex items-center justify-center space-x-1 px-6 py-3 rounded-full cursor-pointer'>
-                <button className=' text-base font-semibold text-white  transition-colors'>
-                  Go to Crunch
-                </button>
-                <span>
-                  <Image
-                    src={'../../../icons/arrow-right-up.svg'}
-                    alt='wave'
-                    width={22}
-                    height={22}
-                    className=''
-                  />
-                </span>
-              </div>
+              <Link href={goToCrunch}>
+                <div className='w-1/2 lg:w-auto bg-button-bg hover:bg-[#0A5681] flex items-center justify-center space-x-1 px-6 py-3 rounded-full cursor-pointer'>
+                  <button className=' text-base font-semibold text-white  transition-colors'>
+                    Go to Crunch
+                  </button>
+                  <span>
+                    <Image
+                      src={'../../../icons/arrow-right-up.svg'}
+                      alt='wave'
+                      width={22}
+                      height={22}
+                      className=''
+                    />
+                  </span>
+                </div>
+              </Link>
               <div className='font-instrumentsans text-primary-200 text-xl font-normal lg:w-[60%] lg:flex lg:justify-end'>
                 <div className='lg:w-[90%] space-y-8'>
                   <p className=''>

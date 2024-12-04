@@ -7,7 +7,15 @@ import { useEffect, useState } from 'react';
 const Footer: React.FC = () => {
   const pathname = usePathname(); // Get the current path
   const [activeLabel, setActiveLabel] = useState<string>('Advisory'); // Default active label
-  // const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false); // Mobile menu state
+
+  const goToCrunch = process.env.NEXT_PUBLIC_GO_TO_CRUNCH; // the go to crunch variable
+
+  // Variable of the Socials
+  const linkedInUrl = process.env.NEXT_PUBLIC_LINKEDIN_URL;
+  const twitterUrl = process.env.NEXT_PUBLIC_TWITTER_URL;
+  const instagramUrl = process.env.NEXT_PUBLIC_INSTAGRAM_URL;
+  const youtubeUrl = process.env.NEXT_PUBLIC_YOUTUBE_URL;
+  const tiktokUrl = process.env.NEXT_PUBLIC_TIKTOK_URL;
 
   useEffect(() => {
     // Map of paths to labels
@@ -84,11 +92,7 @@ const Footer: React.FC = () => {
 
                 {/* Column 4 */}
                 <div className='flex flex-col justify-center space-y-2'>
-                  <MenuItem
-                    href='#'
-                    label='Go to Crunch'
-                    isActive={isActive('#')}
-                  />
+                  <MenuItem href={goToCrunch} label='Go to Crunch' />
                   <MenuItem
                     href=''
                     label='Text'
@@ -106,21 +110,13 @@ const Footer: React.FC = () => {
               <div className='flex flex-col md:flex-row gap-16 text-base p-4 md:p-0'>
                 {/* Column 1 */}
                 <div className='flex flex-col justify-center space-y-2'>
-                  <MenuItem
-                    href='#'
-                    label='LinkedIn'
-                    isActive={isActive('#')}
-                  />{' '}
-                  <MenuItem href='#' label='Tiktok' isActive={isActive('#')} />
+                  <MenuItem href={linkedInUrl} label='LinkedIn' />{' '}
+                  <MenuItem href={tiktokUrl} label='Tiktok' />
                 </div>
 
                 {/* Column 2 */}
                 <div className='flex flex-col justify-center space-y-2'>
-                  <MenuItem
-                    href='#'
-                    label='X (Twitter)'
-                    isActive={isActive('#')}
-                  />
+                  <MenuItem href={twitterUrl} label='X (Twitter)' />
                   <MenuItem
                     href='#'
                     label='#'
@@ -131,11 +127,7 @@ const Footer: React.FC = () => {
 
                 {/* Column 3 */}
                 <div className='flex flex-col justify-center space-y-2'>
-                  <MenuItem
-                    href='#'
-                    label='Instagram'
-                    isActive={isActive('#')}
-                  />{' '}
+                  <MenuItem href={instagramUrl} label='Instagram' />{' '}
                   <MenuItem
                     href='/contact'
                     label='Contact'
@@ -146,7 +138,7 @@ const Footer: React.FC = () => {
 
                 {/* Column 4 */}
                 <div className='flex flex-col justify-center space-y-2'>
-                  <MenuItem href='#' label='Youtube' isActive={isActive('#')} />{' '}
+                  <MenuItem href={youtubeUrl} label='Youtube' />{' '}
                   <MenuItem
                     href=''
                     label='Text'
@@ -240,13 +232,8 @@ const Footer: React.FC = () => {
                   label='Technology'
                   isActive={isActive('/technology')}
                 />
-                <MenuItem
-                  href='#'
-                  label='LinkedIn'
-                  isActive={isActive('#')}
-                  addCss='pt-6'
-                />
-                <MenuItem href='#' label='TikTok' isActive={isActive('#')} />
+                <MenuItem href={linkedInUrl} label='LinkedIn' addCss='pt-6' />
+                <MenuItem href={tiktokUrl} label='TikTok' />
                 <MenuItem
                   href='/legal'
                   label='Terms'
@@ -272,12 +259,7 @@ const Footer: React.FC = () => {
                   label='About'
                   isActive={isActive('/about')}
                 />
-                <MenuItem
-                  href='#'
-                  label='X (Twitter)'
-                  isActive={isActive('#')}
-                  addCss='pt-6'
-                />
+                <MenuItem href={twitterUrl} label='X (Twitter)' addCss='pt-6' />
                 <MenuItem
                   href='#'
                   label='Empty'
@@ -311,12 +293,7 @@ const Footer: React.FC = () => {
                   isActive={isActive('/contact')}
                 />
 
-                <MenuItem
-                  href='#'
-                  label='Instagram'
-                  isActive={isActive('#')}
-                  addCss='pt-6'
-                />
+                <MenuItem href={instagramUrl} label='Instagram' addCss='pt-6' />
                 <MenuItem
                   href='#'
                   label='Empty'
@@ -339,23 +316,14 @@ const Footer: React.FC = () => {
 
               {/* Column 4 */}
               <div className='flex flex-col justify-center space-y-2'>
-                <MenuItem
-                  href='#'
-                  label='Go to Crunch'
-                  isActive={isActive('#')}
-                />
+                <MenuItem href={goToCrunch} label='Go to Crunch' />
                 <MenuItem
                   href=''
                   label='Text'
                   isActive={isActive('')}
                   addCss='invisible'
                 />
-                <MenuItem
-                  href='#'
-                  label='Youtube'
-                  isActive={isActive('#')}
-                  addCss='pt-6'
-                />
+                <MenuItem href={youtubeUrl} label='Youtube' addCss='pt-6' />
                 <MenuItem
                   href='#'
                   label='Empty'
@@ -408,9 +376,9 @@ const Footer: React.FC = () => {
 
 // Individual menu item with icon visibility logic
 interface MenuItemProps {
-  href: string;
+  href: any;
   label: string;
-  isActive: boolean;
+  isActive?: boolean;
   addCss?: string;
 }
 
@@ -438,9 +406,9 @@ const MenuItem: React.FC<MenuItemProps> = ({
 
 // NavLink Component for individual links
 interface NavLinkProps {
-  href: string;
+  href: any;
   label: string;
-  isActive: boolean;
+  isActive?: boolean;
   addCss?: string;
 }
 

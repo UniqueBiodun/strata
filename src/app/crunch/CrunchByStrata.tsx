@@ -1,6 +1,9 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function CrunchByStrata() {
+  const goToCrunch: any = process.env.NEXT_PUBLIC_GO_TO_CRUNCH;
+
   return (
     <>
       <main className='bg-[#ffffff] py-24'>
@@ -15,11 +18,12 @@ export default function CrunchByStrata() {
                 make informed and strategic decisions.
               </p>
             </div>
-            <div>
+
+            <Link href={goToCrunch}>
               <button className='bg-button-bg text-base font-semibold text-white px-[33.5px] py-4 rounded-full transition-colors cursor-pointer hover:bg-[#0A5681]'>
                 Try Crunch free
               </button>
-            </div>
+            </Link>
           </div>
           <div>
             <Image

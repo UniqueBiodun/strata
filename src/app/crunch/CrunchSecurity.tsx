@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const CrunchSecurity = () => {
   return (
@@ -39,11 +40,13 @@ const CrunchSecurity = () => {
                 activity, providing enhanced visibility into the usage of their
                 Crunch instance
               </p>
-              <div className='pt-10'>
-                <button className='bg-secondary-100 text-base font-semibold text-white p-4 rounded-full transition-colors cursor-pointer hover:bg-[#0A5681]'>
-                  More on Strata Security
-                </button>
-              </div>
+              <Link href='/security'>
+                <div className='pt-10'>
+                  <button className='bg-secondary-100 text-base font-semibold text-white p-4 rounded-full transition-colors cursor-pointer hover:bg-[#0A5681]'>
+                    More on Strata Security
+                  </button>
+                </div>
+              </Link>
             </div>
           </div>
         </div>

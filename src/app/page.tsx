@@ -5,8 +5,11 @@ import TestimonialCarousel from './advisory/Testimonial';
 import BuildingBlocksSection from './advisory/BuildBlocks';
 import Crunch from './advisory/IntroductionCrunch';
 import BuildOnStrataBanner1 from './advisory/BuildOnStrataBanner1';
+import Link from 'next/link';
 
 export default function LandingPage() {
+  const buildOnStrata: any = process.env.NEXT_PUBLIC_BUILD_ON_STRATA_URL;
+
   return (
     <>
       <main className='min-h-[95vh] bg-custom-gradient-1 relative'>
@@ -53,11 +56,11 @@ export default function LandingPage() {
           </div>
           {/* Button and Brands Section */}
           <div className='2xl:px-[6.5rem] flex flex-col lg:flex-row gap-10 lg:gap-[10.25rem]'>
-            <div className=''>
-              <button className='bg-button-bg text-base font-semibold text-white px-6 py-4 rounded-full transition-colors cursor-pointer hover:bg-[#0A5681]'>
+            <Link href={buildOnStrata} className='cursor-pointer '>
+              <button className='bg-button-bg text-base font-semibold text-white px-6 py-4 rounded-full transition-colors hover:bg-[#0A5681]'>
                 Build on Strata
               </button>
-            </div>
+            </Link>
             <div className='flex flex-col gap-8'>
               <div className='relative'>
                 <p className='text-primary-300 text-xl font-medium '>

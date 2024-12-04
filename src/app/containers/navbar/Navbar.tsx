@@ -9,6 +9,8 @@ const Navbar: React.FC = () => {
   const [activeLabel, setActiveLabel] = useState<string>('Advisory'); // Default active label
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false); // Mobile menu state
 
+  const goToCrunch: any = process.env.NEXT_PUBLIC_GO_TO_CRUNCH; // the go to crunch variable
+
   useEffect(() => {
     // Map of paths to labels
     const pathToLabelMap: Record<string, string> = {
@@ -103,17 +105,11 @@ const Navbar: React.FC = () => {
             </div>
             <div className='flex flex-col space-y-1'>
               <MenuItem
-                href='#'
+                href={goToCrunch} //check here
                 label='Go to Crunch'
-                isActive={isActive('#')}
                 addCss='lg:pl-8'
               />
-              <MenuItem
-                href='#'
-                label='Empty'
-                isActive={isActive('#')}
-                addCss='invisible'
-              />
+              <MenuItem href='#' label='Empty' addCss='invisible' />
             </div>
           </div>
         </div>
@@ -168,16 +164,14 @@ const Navbar: React.FC = () => {
               </div>
               <div className='flex flex-col justify-center space-y-1'>
                 <MenuItem
-                  href='#'
+                  href={goToCrunch} // check here
                   label='Go to Crunch'
-                  isActive={isActive('#')}
                   addCss='lg:pl-8'
                   onClick={() => setIsMenuOpen(false)}
                 />
                 <MenuItem
                   href='#'
                   label='Empty'
-                  isActive={isActive('#')}
                   addCss='invisible'
                   onClick={() => setIsMenuOpen(false)}
                 />
@@ -192,9 +186,9 @@ const Navbar: React.FC = () => {
 
 // Individual menu item with icon visibility logic
 interface MenuItemProps {
-  href: string;
+  href: any;
   label: string;
-  isActive: boolean;
+  isActive?: boolean;
   addCss?: string;
   onClick?: () => void; // New onClick prop
 }
@@ -230,9 +224,9 @@ const MenuItem: React.FC<MenuItemProps> = ({
 
 // NavLink Component for individual links
 interface NavLinkProps {
-  href: string;
+  href: any;
   label: string;
-  isActive: boolean;
+  isActive?: boolean;
   addCss?: string;
   onClick?: () => void; // New onClick prop
 }

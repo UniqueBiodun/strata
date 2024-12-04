@@ -1,7 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Crunch = () => {
+  const goToCrunch: any = process.env.NEXT_PUBLIC_GO_TO_CRUNCH;
+
   return (
     <main className='pt-24 pb-16 bg-custom-gradient-1'>
       <div className='flex flex-col space-y-12 md:space-y-24'>
@@ -54,7 +57,10 @@ const Crunch = () => {
               </p>
             </div>
             <div className='flex space-x-7 items-center pt-12'>
-              <div className='bg-button-bg hover:bg-[#0A5681] flex items-center space-x-1 px-6 py-3 rounded-full cursor-pointer'>
+              <Link
+                href={goToCrunch} //check here
+                className='bg-button-bg hover:bg-[#0A5681] flex items-center space-x-1 px-6 py-3 rounded-full cursor-pointer'
+              >
                 <button className=' text-base font-semibold text-white  transition-colors'>
                   Go to Crunch
                 </button>
@@ -67,9 +73,9 @@ const Crunch = () => {
                     className=''
                   />
                 </span>
-              </div>
+              </Link>
               <span className='text-button-bg text-base font-semibold cursor-pointer hover:text-[#478db6]'>
-                Learn more
+                <Link href='/about'>Learn more</Link>
               </span>
             </div>
           </div>

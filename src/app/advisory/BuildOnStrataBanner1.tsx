@@ -1,6 +1,9 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function BuildOnStrataBanner1() {
+  const buildOnStrata: any = process.env.NEXT_PUBLIC_BUILD_ON_STRATA_URL;
+
   return (
     <>
       <main className='bg-[#ffffff] py-24'>
@@ -15,11 +18,11 @@ export default function BuildOnStrataBanner1() {
                 let's put your business or idea on the high-performance track.
               </p>
             </div>
-            <div>
+            <Link href={buildOnStrata}>
               <button className='bg-button-bg text-base font-semibold text-white px-7 py-4 rounded-full transition-colors cursor-pointer hover:bg-[#0A5681]'>
                 Let's talk winning!
               </button>
-            </div>
+            </Link>
           </div>
           <div>
             <Image
